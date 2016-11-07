@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
         if (intent.resolveActivity(getPackageManager()) != null)
             startActivity(intent);
+
     }
 
     private void composeSmsMessage(String message)
@@ -103,5 +104,6 @@ public class MainActivity extends AppCompatActivity {
         intent.setData(Uri.parse("tel:" + phoneNumber));
         if (intent.resolveActivity(getPackageManager()) != null)
             startActivity(intent);
+
     }
 }
